@@ -7,7 +7,7 @@
   height: 100vh;
 }
  
-body div form label {
+.HeaderMain {
   font-weight: 900;
 }
 
@@ -25,6 +25,7 @@ body div form label {
   /* includes padding/border in width */
   resize: none;
   opacity: 0.5;
+  border-radius: 5px;
 }
 
 .Contact-Us,
@@ -51,6 +52,45 @@ body div form label {
   background-color: #9aacff;
 }
 
-.textarea:focus {
-  opacity: 0.65;
+
+
+
+
+.AboutUsMain{
+    height: 100vh;
+    padding: 0 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+
+}
+
+.AboutUsFirstHeader1{
+    font-weight: bold;
+    
+}
+
+.AboutUsFirstHeader4{
+    font-weight: 600;
+}
+
+.AboutUsListSpan{
+    font-weight: bolder;
+}
+
+.AboutUsTeamMembers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-position: inside; /* This brings dots inside */
+
+}
+.AboutUsTeamMembers li{
+    text-align: center;
+    width: fit-content; /* Makes background fit content */
+    padding-right: 40px;
+}
+
+.AboutUsThanks{
+
+
 }
