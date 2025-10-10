@@ -1,0 +1,56 @@
+.main {
+  /* background-image: url("img1.png");
+  background-size: cover; */
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  height: 100vh;
+}
+ 
+body div form label {
+  font-weight: 900;
+}
+
+.textarea {
+  /* background-color:rgba(255,255,255, 60%);white color with transperancy equal 60% */
+  width: 100%;
+  /* take full width of parent */
+  max-width: 600px;
+  /* don’t get too wide on large screens */
+  min-width: 250px;
+  /* don’t shrink too much on small screens */
+  height: 150px;
+  /* fixed height (can be adjusted) */
+  box-sizing: border-box;
+  /* includes padding/border in width */
+  resize: none;
+  opacity: 0.5;
+}
+
+.Contact-Us,
+.About-Us,
+.Submit-Button {
+  background-color: #5a6dc5;
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  text-decoration: none;
+  box-shadow: 3px 3px 10px -1px #000;
+  border: none;
+}
+
+.Contact-Us {
+  float: right;
+}
+
+/* pseudo class */
+.Contact-Us:hover,
+.About-Us:hover,
+.Submit-Button:hover {
+  background-color: #9aacff;
+}
+
+.textarea:focus {
+  opacity: 0.65;
+}
