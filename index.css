@@ -1,55 +1,80 @@
-.main {
-  /* background-image: url("img1.png");
-  background-size: cover; */
+.HomeMain {
   padding: 10px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
-  height: 100vh;
+  font-size: 20px;
+  background: #F8F9FD;
+  border-radius: 40px;
+  padding: 15px 20px;
+  color: #667eea;
+  max-width: 600px;
+  min-height: 370px;
+  margin: 0 auto;
+  width: 90%;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    border: 5px solid rgb(255, 255, 255);
 }
- 
+
 .HeaderMain {
   font-weight: 900;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: rgb(16, 137, 211);
+  
+
 }
+body{
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    background-size:cover;
+    margin-top: 70px ;
+}
+
 
 .textarea {
-  /* background-color:rgba(255,255,255, 60%);white color with transperancy equal 60% */
   width: 100%;
-  /* take full width of parent */
   max-width: 600px;
-  /* don’t get too wide on large screens */
   min-width: 250px;
-  /* don’t shrink too much on small screens */
-  height: 150px;
-  /* fixed height (can be adjusted) */
-  box-sizing: border-box;
-  /* includes padding/border in width */
-  resize: none;
-  opacity: 0.5;
-  border-radius: 5px;
+  resize: vertical;
+  min-height: 200px;
+  display: block;
+  border-color: #667eea ;
+  border-radius: 20px;
+  border-width: 2px;
+  padding: 8px;
+
 }
 
-.Contact-Us,
-.About-Us,
-.Submit-Button {
-  background-color: #5a6dc5;
+.textarea::placeholder {
+    opacity: 0.3;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+
+
+.SubmitButton{
+  display: block;
+  width: 50%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
   color: white;
-  padding: 5px 10px;
-  display: inline-block;
-  border-radius: 4px;
-  text-decoration: none;
-  box-shadow: 3px 3px 10px -1px #000;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
   border: none;
+  transition: all 0.2s ease-in-out;
+
+}
+.SubmitButton:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
 }
 
-.Contact-Us {
-  float: right;
-}
-
-/* pseudo class */
-.Contact-Us:hover,
-.About-Us:hover,
-.Submit-Button:hover {
-  background-color: #9aacff;
+.SubmitButton:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
 }
 
 
@@ -57,10 +82,13 @@
 
 
 .AboutUsMain{
-    height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
     padding: 0 15px;
     font-family: "Times New Roman", Times, serif;
     font-style: italic;
+    color: white;
+
 
 }
 
@@ -93,4 +121,160 @@
 .AboutUsThanks{
 
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.container {
+  max-width: 600px;
+  background: #F8F9FD;
+
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(16, 137, 211);
+}
+
+.form {
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form .input {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: #cff0ff 0px 10px 10px -5px;
+  border-inline: 2px solid transparent;
+}
+
+.form .input::-moz-placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.form .input::placeholder {
+  color: rgb(170, 170, 170);
+}
+
+.form .input:focus {
+  outline: none;
+  border-inline: 2px solid #12B1D1;
+}
+
+.form .forgot-password {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.form .forgot-password a {
+  font-size: 11px;
+  color: #0099ff;
+  text-decoration: none;
+}
+
+.form .login-button {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.form .login-button:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
+}
+
+.form .login-button:active {
+  transform: scale(0.95);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
+}
+
+.social-account-container {
+  margin-top: 25px;
+}
+
+.social-account-container .title {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  color: rgb(170, 170, 170);
+}
+
+.social-account-container .social-accounts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.social-account-container .social-accounts .social-button {
+  background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+  border: 5px solid white;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-account-container .social-accounts .social-button .svg {
+  fill: white;
+  margin: auto;
+}
+
+.social-account-container .social-accounts .social-button:hover {
+  transform: scale(1.2);
+}
+
+.social-account-container .social-accounts .social-button:active {
+  transform: scale(0.9);
+}
+
+.agreement {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.agreement a {
+  text-decoration: none;
+  color: #0099ff;
+  font-size: 9px;
 }
