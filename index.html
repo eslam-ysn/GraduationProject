@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+
+</head>
+<body>
+  <!-- to choose the language according to browser language -->
+  <script>
+
+  const userLang = navigator.language || navigator.userLanguage;
+
+  if (userLang.startsWith('ar')) {
+    window.location.href = "./FrontEnd/front-Ar/index-Ar.html";
+  } else {
+
+    window.location.href = '/FrontEnd/front-En/index.html';
+  }
+</script>
+<!-- ********************************** -->
+</body>
+</html>
