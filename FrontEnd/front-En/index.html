@@ -13,6 +13,47 @@
 
     <link rel="stylesheet" href="index.css" />
   </head>
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    // Apply saved theme
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    // Toggle on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      if (isDark) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
   <body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -22,7 +63,7 @@
 
     <div class="NavBar">
       <nav
-        class="navbar fixed-top navbar-expand-sm navbar-dark"
+        class="navbar fixed-top navbar-expand-sm navbar-dark "
         style="
           background-color: rgba(0, 0, 0, 0.4);
           backdrop-filter: blur(10px);
@@ -37,13 +78,18 @@
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
-            class="navbar-toggler"
+            class="navbar-toggler me-auto"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
+
             <span class="navbar-toggler-icon"></span>
           </button>
+                    <button id="themeToggle" class="navbar-toggler ms-auto" type="button" aria-label="Toggle theme">
+           🌙
+          </button>
+
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <!-- collapse navbar-collapse: makes the nav bar functionallity works proparly -->
