@@ -13,41 +13,6 @@
 
     <link rel="stylesheet" href="index.css" />
   </head>
-  
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme');
-
-    // Apply saved theme
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️';
-    }
-
-    // Toggle on click
-    toggleBtn.addEventListener('click', () => {
-      const isDark = document.body.classList.contains('dark-mode');
-      if (isDark) {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-        toggleBtn.textContent = '🌙';
-      } else {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-        toggleBtn.textContent = '☀️';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
 
 
   <body>
@@ -139,5 +104,33 @@
         <span class="forgot-password"><a href="mailto:eslamyasen2@gmail.com">Forgot Password ?</a></span>
         <input class="login-button" type="submit" value="Sign In" />
       </form>
+
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    // Apply saved theme
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    // Toggle on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      if (isDark) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      }
+    });
+  </script>
+
+
   </body>
 </html>

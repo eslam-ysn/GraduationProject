@@ -1,19 +1,18 @@
 .HomeMain {
   padding: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
   font-size: 20px;
-  background: #F8F9FD;
+  background: #f8f9fd;
   border-radius: 40px;
   padding: 15px 20px;
   color: #667eea;
   max-width: 600px;
   min-height: 370px;
   margin: 0 auto;
-  width: 90%; 
+  width: 90%;
   box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
   border: 5px solid rgb(255, 255, 255);
- 
 }
 
 .HeaderMain {
@@ -22,16 +21,16 @@
   text-align: center;
   font-size: 30px;
   color: rgb(16, 137, 211);
-
 }
-body{
-    background: linear-gradient(135deg, #8097ff 0%, #be7fff 100%);
-    background-size:cover;
 
-    display: flex;
-  justify-content: center;   /* horizontal center */
+body {
+  background: linear-gradient(135deg, #8097ff 0%, #be7fff 100%);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  /* horizontal center */
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .textarea {
@@ -41,73 +40,84 @@ body{
   resize: vertical;
   min-height: 200px;
   display: block;
-  border-color: #92a2cc ;
+  border-color: #92a2cc;
   border-radius: 20px;
   border-width: 2px;
   padding: 8px;
-
+  color: black;
 }
 
 .textarea::placeholder {
-    opacity: 0.3;
+  opacity: 0.3;
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
 
-.SubmitButton{
-  display: block;
+.SubmitButton {
+  display: flex;
   width: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10%;
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  background: linear-gradient(45deg,
+      rgb(16, 137, 211) 0%,
+      rgb(18, 177, 209) 100%);
   color: white;
   padding-block: 15px;
   margin: 20px auto;
   border-radius: 20px;
-  box-shadow:  rgba(255, 255, 255, 0.878) 0px 20px 10px -15px;
+  box-shadow: rgba(255, 255, 255, 0.878) 0px 20px 10px -15px;
   border: none;
   transition: all 0.2s ease-in-out;
-
 }
-.SubmitButton:hover {
-  transform: scale(1.03);
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 23px 10px -20px;
-}
-
-.SubmitButton:active {
-  transform: scale(0.95);
-  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
-}
-
-
-
-
 
 
 body.dark-mode {
   background: linear-gradient(135deg, #3a4575 0%, #5b3f79 100%) !important;
   display: flex;
-  justify-content: center;   /* horizontal center */
+  justify-content: center;
+  /* horizontal center */
   align-items: center;
-  min-height: 100vh; 
+  min-height: 100vh;
+}
+
+#micButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-weight: bold;
+  background: linear-gradient(45deg,
+      rgb(16, 137, 211) 0%,
+      rgb(18, 177, 209) 100%);
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.878) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+
 }
 
 #themeToggle {
-  width: 56px;                
-  height: 40px; 
-  display:flex !important;               
+  width: 56px;
+  height: 40px;
+  display: flex !important;
 }
-
-
 
 #themeToggle {
   display: flex !important;
 }
 
-body.dark-mode .SubmitButton{
-    display: block;
+body.dark-mode .SubmitButton {
+  display: block;
   width: 50%;
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(16, 64, 94) 0%, rgb(52, 88, 93) 100%) !important;
+  background: linear-gradient(45deg,
+      rgb(16, 64, 94) 0%,
+      rgb(52, 88, 93) 100%) !important;
   color: white;
   padding-block: 15px;
   margin: 20px auto;
@@ -117,9 +127,27 @@ body.dark-mode .SubmitButton{
   transition: all 0.2s ease-in-out;
 }
 
+
+body.dark-mode .micButton {
+  display: block;
+  width: 50%;
+  font-weight: bold;
+  background: linear-gradient(45deg,
+      rgb(16, 64, 94) 0%,
+      rgb(52, 88, 93) 100%) !important;
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: #ffffff 0px 10px 10px -5px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+
 body.dark-mode .HomeMain {
   padding: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
   font-size: 20px;
   background: #343536;
@@ -131,9 +159,10 @@ body.dark-mode .HomeMain {
   margin: 0 auto;
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.878) 0px 30px 30px -20px;
-    border: 5px solid #343536;
+  border: 5px solid #343536;
 }
-body.dark-mode .HeaderMain{
+
+body.dark-mode .HeaderMain {
   font-weight: 900;
   display: block;
   text-align: center;
@@ -148,104 +177,64 @@ body.dark-mode .textarea {
   resize: vertical;
   min-height: 200px;
   display: block;
-  border-color: #f5f5f5 ;
+  border-color: #f5f5f5;
   border-radius: 20px;
   border-width: 2px;
   padding: 8px;
   background-color: #343536;
-    box-shadow: #8d8d8d 0px 10px 10px -5px;
-
+  box-shadow: #8d8d8d 0px 10px 10px -5px;
+  color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.AboutUsMain{
-    margin-top: 70px;
-    padding: 0 15px;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
-    color: rgb(0, 0, 0);
-    font-weight: 400;
-
-
+.AboutUsMain {
+  margin-top: 70px;
+  padding: 0 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
 }
 
-.AboutUsFirstHeader1{
-    font-weight: bold;
-    
+.AboutUsFirstHeader1 {
+  font-weight: bold;
 }
 
-.AboutUsFirstHeader4{
-    font-weight: 600;
+.AboutUsFirstHeader4 {
+  font-weight: 600;
 }
 
-.AboutUsListSpan{
-    font-weight: bolder;
+.AboutUsListSpan {
+  font-weight: bolder;
 }
 
-.AboutUsTeamMembers{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style-position: inside; /* This brings dots inside */
-
-}
-.AboutUsTeamMembers li{
-    text-align: center;
-    width: fit-content; /* Makes background fit content */
-    padding-right: 40px;
+.AboutUsTeamMembers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-position: inside;
+  /* This brings dots inside */
 }
 
-
-
-
-body.dark-mode .AboutUsMain{
-    margin-top: 70px;
-    padding: 0 15px;
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
-    color: rgb(255, 255, 255);
-    font-weight: 400;
-
-
+.AboutUsTeamMembers li {
+  text-align: center;
+  width: fit-content;
+  /* Makes background fit content */
+  padding-right: 40px;
 }
 
+body.dark-mode .AboutUsMain {
+  margin-top: 70px;
+  padding: 0 15px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
 
-
-
-
-
-
-
-
-
-
-/* From Uiverse.io by Smit-Prajapati */ 
+/* From Uiverse.io by Smit-Prajapati */
 .container {
   max-width: 600px;
-  background: #F8F9FD;
+  background: #f8f9fd;
 
   border-radius: 40px;
   padding: 25px 35px;
@@ -279,15 +268,13 @@ body.dark-mode .AboutUsMain{
   border-inline: 2px solid transparent;
 }
 
-
-
 .form .input::placeholder {
   color: rgb(170, 170, 170);
 }
 
 .form .input:focus {
   outline: none;
-  border-inline: 2px solid #12B1D1;
+  border-inline: 2px solid #12b1d1;
 }
 
 .form .forgot-password {
@@ -306,7 +293,9 @@ body.dark-mode .AboutUsMain{
   display: block;
   width: 100%;
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
+  background: linear-gradient(45deg,
+      rgb(16, 137, 211) 0%,
+      rgb(18, 177, 209) 100%);
   color: white;
   padding-block: 15px;
   margin: 20px auto;
@@ -326,18 +315,6 @@ body.dark-mode .AboutUsMain{
   box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 15px 10px -10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 body.dark-mode .container {
   max-width: 600px;
   background-color: #343536;
@@ -354,7 +331,6 @@ body.dark-mode .heading {
   font-weight: 900;
   font-size: 30px;
   color: rgb(255, 255, 255);
-
 }
 
 body.dark-mode .form {
@@ -373,10 +349,7 @@ body.dark-mode .form .input {
   box-shadow: #8d8d8d 0px 10px 10px -5px;
   border: 1px solid rgb(255, 255, 255);
   color: white;
-
 }
-
-
 
 body.dark-mode .form .input::placeholder {
   color: rgb(255, 255, 255);
@@ -384,7 +357,7 @@ body.dark-mode .form .input::placeholder {
 
 body.dark-mode .form .input:focus {
   outline: none;
-  border-inline: 2px solid #12B1D1;
+  border-inline: 2px solid #12b1d1;
 }
 
 body.dark-mode .form .forgot-password {
@@ -403,7 +376,9 @@ body.dark-mode .form .login-button {
   display: block;
   width: 100%;
   font-weight: bold;
-  background: linear-gradient(45deg, rgb(16, 64, 94) 0%, rgb(52, 88, 93) 100%) !important;
+  background: linear-gradient(45deg,
+      rgb(16, 64, 94) 0%,
+      rgb(52, 88, 93) 100%) !important;
   color: white;
   padding-block: 15px;
   margin: 20px auto;

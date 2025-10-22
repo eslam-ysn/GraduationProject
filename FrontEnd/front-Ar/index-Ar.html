@@ -16,44 +16,6 @@
 
 
 
-
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme');
-
-    // Apply saved theme
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️';
-    }
-
-    // Toggle on click
-    toggleBtn.addEventListener('click', () => {
-      const isDark = document.body.classList.contains('dark-mode');
-      if (isDark) {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-        toggleBtn.textContent = '🌙';
-      } else {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-        toggleBtn.textContent = '☀️';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
   <body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -119,13 +81,78 @@
         <br />
         <textarea
           name="opinion"
+          id="opinion"
           required
           placeholder=" من فضلك شارك أرائك هنا... "
           class="textarea"
         ></textarea>
         <br />
+        <button id="micButton" type="button">تكلم🎤</button>
         <button type="submit" class="SubmitButton">موافق</button>
       </form>
     </div>
+
+
+      <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    // Apply saved theme
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    // Toggle on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      if (isDark) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      }
+    });
+  </script>
+
+    <script>
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = true;
+      recognition.lang = "ar-JO";
+
+      const micButton = document.getElementById("micButton");
+      const output = document.getElementById("opinion");
+
+      micButton.addEventListener("click", () => {
+        recognition.start();
+        micButton.textContent = "🎙️ جاري الاستماع...";
+      });
+
+      recognition.onresult = (event) => {
+        let transcript = "";
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          transcript += event.results[i][0].transcript;
+        }
+        output.value = transcript;
+      };
+
+      recognition.onend = () => {
+        micButton.textContent = "🎤 Speak";
+      };
+    } else {
+      alert("Sorry, your browser does not support speech recognition.");
+    }
+  </script>
+
+
+
+
   </body>
 </html>

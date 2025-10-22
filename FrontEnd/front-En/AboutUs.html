@@ -15,41 +15,6 @@
   </head>
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggleBtn = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme');
-
-    // Apply saved theme
-    if (savedTheme === 'dark') {
-      document.body.classList.add('dark-mode');
-      toggleBtn.textContent = '☀️';
-    }
-
-    // Toggle on click
-    toggleBtn.addEventListener('click', () => {
-      const isDark = document.body.classList.contains('dark-mode');
-      if (isDark) {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-        toggleBtn.textContent = '🌙';
-      } else {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-        toggleBtn.textContent = '☀️';
-      }
-    });
-  });
-</script>
-
-
-
-
-
-
-
-
-
   <body>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -145,6 +110,33 @@
           project. His expertise, encouragement, and insightful feedback played a vital role in helping
            us overcome challenges and achieve our objectives successfully.</p>
 </div>
+
+
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+
+    // Apply saved theme
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    // Toggle on click
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      if (isDark) {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+        toggleBtn.textContent = '🌙';
+      } else {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+        toggleBtn.textContent = '☀️';
+      }
+    });
+  </script>
+
 
 </body>
 
