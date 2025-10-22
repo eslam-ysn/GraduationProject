@@ -134,6 +134,7 @@
       micButton.addEventListener("click", () => {
         recognition.start();
         micButton.textContent = "🎙️ Listening...";
+        micButton.classList.add("listening");  
       });
 
       recognition.onresult = (event) => {
@@ -146,6 +147,7 @@
 
       recognition.onend = () => {
         micButton.textContent = "🎤 Speak";
+        micButton.classList.remove("listening");
       };
     } else {
       alert("Sorry, your browser does not support speech recognition.");

@@ -132,7 +132,8 @@
 
       micButton.addEventListener("click", () => {
         recognition.start();
-        micButton.textContent = "🎙️ جاري الاستماع...";
+        micButton.textContent = "🎙️جاري الاستماع...";
+        micButton.classList.add("listening");  
       });
 
       recognition.onresult = (event) => {
@@ -144,7 +145,8 @@
       };
 
       recognition.onend = () => {
-        micButton.textContent = "🎤 Speak";
+        micButton.textContent = "تكلم🎤";
+        micButton.classList.remove("listening");
       };
     } else {
       alert("عذراً، متصفحك لا يدعم التعرف على الكلام.");
