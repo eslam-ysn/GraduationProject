@@ -8,5 +8,5 @@ class PredictOut(BaseModel):
     label: str
     score: float
     model_version: str
-    ensemble: bool = False
+    ensemble: bool = True
     lang: str
