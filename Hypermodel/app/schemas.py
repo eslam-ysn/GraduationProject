@@ -1,0 +1,12 @@
+from pydantic import BaseModel, Field
+
+class PredictIn(BaseModel):
+    text: str = Field(..., min_length=1, max_length=5000)
+    lang: str | None = Field(default=None, description="Optional hint: 'ar' or 'en'")
+
+class PredictOut(BaseModel):
+    label: str
+    score: float
+    model_version: str
+    ensemble: bool = True
+    lang: str
